@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { PrincessComponent } from './princess/princess.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ServerGuildService } from './services/server-guild/server-guild.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,10 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    ServerGuildService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
